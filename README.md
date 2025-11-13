@@ -51,15 +51,21 @@ Option 2: Using Python's Built-in Server
 
 📁 File Structure
 
-.
-├── Audio/              # (Assumed) Folder for all .mp3 files
-│   ├── Cant/
-│   └── Man/
-├── index.html          # Main page (Lessons P1 - 6)
-├── index6.html         # Second page (Lessons P6 - 9)
-├── sentences.json      # Data file with Chinese, Pinyin, and audio paths
-├── script.js           # Core JavaScript for fetching data and interactivity
-└── styles.css          # All CSS for styling the application
+    Audio/ (Assumed) Folder for all .mp3 files
+
+        Cant/
+
+        Man/
+
+    index.html - Main page (Lessons P1 - 6)
+
+    index6.html - Second page (Lessons P6 - 9)
+
+    sentences.json - Data file with Chinese, Pinyin, and audio paths
+
+    script.js - Core JavaScript for fetching data and interactivity
+
+    styles.css - All CSS for styling the application
 
 💡 Note on Data for Multiple Pages
 
