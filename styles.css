@@ -1,0 +1,99 @@
+/* Basic Styling for the Body and Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Styling for each individual sentence row */
+.sentence-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sentence-row:last-child {
+    border-bottom: none;
+}
+
+/* Container for Chinese/Pinyin stacking (Flex Column) */
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    flex-grow: 1; 
+    margin-right: 15px; 
+    text-align: left; 
+    padding: 0; 
+}
+
+/* NEW: Wrapper to keep checkbox and Chinese text on one line */
+.chinese-line-wrapper {
+    display: flex;
+    align-items: center;
+    /* This gap controls the space between the checkbox and the Chinese text */
+    gap: 8px; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the text flows correctly next to the checkbox */
+.chinese-text {
+    font-size: 1.2em; 
+    margin: 0; 
+    /* Ensures the paragraph tag behaves like inline content next to the checkbox */
+    display: inline;
+    text-align: left;
+}
+
+/* 💥 FIX: Adjust Pinyin alignment to match the Chinese text's starting point 💥 */
+.pinyin-text {
+    font-size: 0.9em; 
+    color: #666; 
+    /* The checkbox takes up space. We use margin-left to push the Pinyin 
+       over so it aligns perfectly beneath the Chinese characters. 
+       The value (e.g., 28px) needs to cover the width of the checkbox + the 8px gap.
+       You may need to slightly adjust this value (28px) depending on your browser.
+    */
+    margin: 0 0 0 28px; 
+    padding: 0;
+    text-align: left;
+}
+
+/* ESSENTIAL: Class to hide the Pinyin */
+.pinyin-hidden {
+    display: none; 
+}
+
+/* Styling for the Play button */
+.audio-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.audio-button:hover {
+    background-color: #0056b3;
+}
